@@ -1,2 +1,2 @@
 # teachtogether_exercises
-My responses to exercises on https://teachtogether.tech/
+My answers to exercises on https://teachtogether.tech/

@@ -1,0 +1,46 @@
+---
+title: "Answers to TTT exercises"
+---
+
+## Chapter 5 Cognitive Architecture
+
+
+```{r}
+library(tidyverse)
+```
+
+
+Create a Faded Example (pairs/30)
+
+```{r eval=FALSE}
+library(palmerpenguins)
+ggplot( data = ___,mapping= aes(x= ___ ))+
+geom_histogram()+
+  labs(
+    x = "bill_length_mm",
+    y = "Frequency",
+    title = "Distribution of bill length of Penguins in mm "
+  )
+
+```
+
+Create a Parsons Problem (pairs/20)
+
+```{r eval=FALSE}
+iris %>% 
+  map_dbl(mean) %>% 
+  filter(Species=="setosa") %>% 
+  select(Sepal.Length,Sepal.Width)
+
+```
+
+Cognitive Apprenticeship
+
+```{r}
+mtcars %>%
+  split(.$cyl) %>%
+  map(~ lm(mpg ~ wt, data = .x)) %>%
+  map(summary) %>%
+  map_dbl("r.squared")
+```
+
